@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     axios.get(`https://api.pexels.com/v1/search?query=${search}`, {
       headers: {
-        Authorization: 'plm3T9CeZvIBdriUjhLhEJYBRzicln86kQ8L0W3uIcao73wKE65C7Lz1' // Replace with your actual Pexels API key
+        Authorization: 'plm3T9CeZvIBdriUjhLhEJYBRzicln86kQ8L0W3uIcao73wKE65C7Lz1'
       }
     })
     .then(res => {
