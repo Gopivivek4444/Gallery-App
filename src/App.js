@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState("people");
+  const [search, setSearch] = useState("cars");
 
+  const inputRef = useRef();
+
+
+ 
   useEffect(() => {
     axios.get(`https://api.pexels.com/v1/search?query=${search}`, {
       headers: {
-        Authorization: 'plm3T9CeZvIBdriUjhLhEJYBRzicln86kQ8L0W3uIcao73wKE65C7Lz1' // Replace with your actual Pexels API key
+        Authorization: process.env.REACT_APP_PEXELS_API_KEY // Replace with your actual Pexels API key
       }
     })
     .then(res => {
@@ -27,6 +31,7 @@ const App = () => {
     const text = event.target.elements.inputName.value;
     setSearch(text);
     console.log(search);
+    inputRef.current.value="";
   }
 
   return (
@@ -36,12 +41,12 @@ const App = () => {
         <br />
         <form onSubmit={HandleOnSubmit}>
           <div className='input-group mb-3'>
-            <input size="50" type='text' name='inputName' placeholder='Search' />
+            <input size="50" type='text' name='inputName' placeholder='Search' ref={inputRef}/>
             <button className="btn btn-primary" type='submit'> Search</button>
           </div>
         </form>
         <br />
-        {data.length > 0 ? <Gallery data={data} /> : <p>Loading...</p>}
+        {data.length > 0 ? <Gallery data={data} /> : <p className='text-danger'>No Results Found</p>}
       </center>
     </div>
   );
