@@ -8,19 +8,7 @@ input{
 
 
 
-/* .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
 
-.input-group {
-  max-width: 500px;
-  width: 100%;
-}
-
-/* App.css */
 
 .card {
   margin: 13px;

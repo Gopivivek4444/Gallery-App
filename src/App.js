@@ -19,7 +19,7 @@ const App = () => {
     })
     .then(res => {
       setData(res.data.photos);
-      console.log(res.data.photos);
+      // console.log(res.data.photos);
     })
     .catch(err => {
       console.error("Error fetching data from Pexels API:", err);
@@ -30,7 +30,7 @@ const App = () => {
     event.preventDefault();
     const text = event.target.elements.inputName.value;
     setSearch(text);
-    console.log(search);
+    // console.log(search);
     inputRef.current.value="";
   }
 
@@ -40,8 +40,8 @@ const App = () => {
         <h1>Photo Gallery</h1>
         <br />
         <form onSubmit={HandleOnSubmit}>
-          <div className='input-group mb-3'>
-            <input size="50" type='text' name='inputName' placeholder='Search' ref={inputRef}/>
+          <div className='input-group mb-3 justify-content-center'>
+            <input  size='40'type='text' name='inputName' placeholder='Search' ref={inputRef}/>
             <button className="btn btn-primary" type='submit'> Search</button>
           </div>
         </form>
