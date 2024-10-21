@@ -41,7 +41,8 @@ input{
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  
+  max-width: 100%;
+  margin:0;
 }
 
 
