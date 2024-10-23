@@ -40,7 +40,7 @@ input[type=text] {
   background-color: white;
   height: 25px;
   border: 2px solid black;
-  width: 400px;
+  min-width: 260px;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
 }
@@ -88,7 +88,7 @@ button:active{
   /* border: 1px solid red; */
   display: grid;
   grid-template-columns: repeat(auto-fit,300px); /* minmax(300px,1fr) */
-  gap:15px;
+  gap:30px;
   justify-content: center;
 }
 .container_1{
