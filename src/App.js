@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -35,19 +35,19 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      <center>
-        <h1>Photo Gallery</h1>
+    <div className="container_1">
+     
+        <h1 style={{color:'black'}}>Photo Gallery</h1>
         <br />
         <form onSubmit={HandleOnSubmit}>
-          <div className='input-group mb-3 justify-content-center'>
-            <input  size='40'type='text' name='inputName' placeholder='Search' ref={inputRef}/>
-            <button className="btn btn-primary" type='submit'> Search</button>
+          <div className='justify-content-center'>
+            <input  type='text' name='inputName' placeholder='Search' ref={inputRef}/>
+            <button type='submit'> Search</button>
           </div>
         </form>
         <br />
-        {data.length > 0 ? <Gallery data={data} /> : <p className='text-danger'>No Results Found</p>}
-      </center>
+        {data.length > 0 ? <Gallery data={data} /> : <p style={{color:'red'}}>No Results Found</p>}
+      
     </div>
   );
 };
@@ -56,23 +56,28 @@ export default App;
 
 function Gallery({ data }) {
   return (
-    <div>
-      <div className='row'>
+    <div className='card-container'>
+      
         {data.map((image) => (
-          <div className='col-md-4' key={image.id}>
-            <div className="card" style={{ width: "20rem", height:"25rem" }}>
-              <img className='card-img-top' src={image.src.medium} alt={image.alt} style={{ objectFit: 'cover', height: '200px' }} />
+           <div className='card_1' key={image.id}>
+              <div className='card-img'>
+                 <img  src={image.src.medium} alt={image.alt}  style={{height:'200px',objectFit:'cover',width:'280px'}}/>
+              </div>
               <div className="card-body">
                 <h5 className="card-title">{image.photographer}</h5>
-                <p className="card-text">
+                <p className="card-text" style={{fontSize:'130%'}}>
                  {image.alt}
                 </p>
-                <a href={image.photographer_url} className="btn btn-dark">{image.photographer}</a>
+                <a href={image.photographer_url} className="btn btn-dark">
+                  <button style={{height:'30px',backgroundColor:'	#be29ec',borderRadius:'8px',border:'none',minWidth:'130px'}}>
+                  {image.photographer}
+                  </button>
+                </a>
               </div>
             </div>
-          </div>
+          
         ))}
-      </div>
+     
     </div>
   );
 }

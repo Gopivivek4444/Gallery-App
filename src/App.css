@@ -1,31 +1,26 @@
 
-
-input{
-  border-radius: 5px;
-  border-style: none;
-}
 /* App.css */
 
 
 
 
 
-.card {
+/* .card {
   margin: 13px;
   background-color: rgba(255, 255, 255, 0.1);
-  /* Transparent card background */
+  
   border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Initial box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Slight lifting effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-}
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+} */
 
-.card-body {
+/* .card-body {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   transition: background-color 0.3s ease;
@@ -33,16 +28,69 @@ input{
 
 
 .container {
-  background-color: lightgrey; /* Set the background color */
-   /* Full width of the viewport */
-   /* Full height of the viewport */
+  background-color: lightgrey; 
   padding: 20px;
-  border-radius: 10px; /* Optional: round corners */
+  border-radius: 10px; 
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  max-width: 100%;
-  margin:0;
+  justify-content: center; 
+  align-items: center; 
+  
+} */
+input[type=text] {
+  background-color: white;
+  height: 25px;
+  border: 2px solid black;
+  width: 400px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+button {
+  color: white;
+  background-color: #800080;
+  height: 30px;
+  border: none;
+  border-radius: 0px 15px 0px 0px;
+}
+
+button:hover {
+  background-color: #924DBF;
+}
+
+button:active{
+  background-color: #660066;
 }
 
 
+.card_1{
+  padding: 10px;
+  border: NONE; /* rgb(75,82,92) */
+  border-radius: 10px;
+  background-color:   white;  /* #222429 */
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_1:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+}
+/* .card-img{
+  margin: 5px;
+  border: 1px soild red;
+  padding: 2px;
+  height: 210px;
+  width: minmax(260px,1fr);
+} */
+.card-container{
+
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,300px); /* minmax(300px,1fr) */
+  gap:15px;
+  justify-content: center;
+}
+.container_1{
+  text-align: center;
+}
