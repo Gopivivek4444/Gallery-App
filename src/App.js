@@ -63,11 +63,13 @@ function Gallery({ data }) {
               <div className='card-img'>
                  <img  src={image.src.medium} alt={image.alt}  style={{height:'200px',objectFit:'cover',width:'280px'}}/>
               </div>
-              <div className="card-body">
-                <h5 className="card-title">{image.photographer}</h5>
-                <p className="card-text" style={{fontSize:'130%'}}>
+              <div className="card-body" >
+                <h5 className="card-title" style={{fontSize:'120%'}}>{image.photographer}</h5>
+                <p className="card-text"style={{fontSize:'110%'}} >
                  {image.alt}
                 </p>
+                </div>
+                <div className='btnClass'>
                 <a href={image.photographer_url} className="btn btn-dark">
                   <button style={{height:'30px',backgroundColor:'	#be29ec',borderRadius:'8px',border:'none',minWidth:'130px'}}>
                   {image.photographer}

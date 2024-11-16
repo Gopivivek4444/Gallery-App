@@ -1,41 +1,4 @@
 
-/* App.css */
-
-
-
-
-
-/* .card {
-  margin: 13px;
-  background-color: rgba(255, 255, 255, 0.1);
-  
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
-} */
-
-/* .card-body {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  transition: background-color 0.3s ease;
-}
-
-
-.container {
-  background-color: lightgrey; 
-  padding: 20px;
-  border-radius: 10px; 
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  
-} */
 input[type=text] {
   background-color: white;
   height: 25px;
@@ -63,11 +26,14 @@ button:active{
 
 .card_1{
   padding: 8px;
-  border: NONE; /* rgb(75,82,92) */
+  border: none; /* rgb(75,82,92) */
   border-radius: 10px;
   background-color:   white;  /* #222429 */
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
